@@ -1,4 +1,7 @@
 def summation_while(n: int) -> int:
+    if n < 1:
+        print("Even though the assignment calls for summing values 1-n, which gives the assumption that n is positive, Marshall says this function goes into an infinite loop with negative numbers. So here we are breaking the loop for negative numbers...Marshall...🤣🤣🤣🤣")
+        return n 
     sum = n
     while n != 0:
         sum += n - 1
@@ -13,6 +16,9 @@ def summation_for(n: int) -> int:
 
 def main():
     print("While loop:")
+    print(summation_while(-5))
+    print(summation_while(-1))
+    print(summation_while(0))
     print(summation_while(1))
     print(summation_while(2))
     print(summation_while(3))
